@@ -1,0 +1,11 @@
+ button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+
+.layout {
+	padding:5px;
+	border: solid, 2px;
+}
