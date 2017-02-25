@@ -1,7 +1,7 @@
 
       var sports = ["Skiing", "Gymnastics", "Football", "Racing", "Baseball", "Hockey"];
       var sport = "";
-      var host = "http://api.giphy.com/v1/gifs/"
+      var host = "https://api.giphy.com/v1/gifs/"
       var key = "&api_key=dc6zaTOxFJmzC";   
       var limit = "&limit=10";
       var pagestatus = "still"; 
