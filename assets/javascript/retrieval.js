@@ -1,5 +1,5 @@
 
-      var sports = ["skiing", "gymnastics", "american football", "horseback riding", "baseball", "hockey"];
+      var sports = ["Skiing", "Gymnastics", "Football", "Racing", "Baseball", "Hockey"];
       var sport = "";
       var host = "http://api.giphy.com/v1/gifs/"
       var key = "&api_key=dc6zaTOxFJmzC";   
@@ -9,16 +9,14 @@
       function renderButtons() {
          $("#sport-view").empty();
          for (var i = 0; i < sports.length; i++) {
-           var newBtn = $("<button>").html(sports[i]).attr("data-name", sports[i]).attr("class", "sportBtn");
+          var newBtn = $("<button class = 'col-xs-5 col-md-2 btn btn-info sportBtn'></button");
+          newBtn.html(sports[i]).attr("data-name", sports[i]);
            $("#sport-view").append(newBtn);
        }
-        // YOUR CODE GOES HERE
 
       }
 
-       // var queryURL = "http://www.omdbapi.com/?t=" + movie + "&y=&plot=short&r=json";
-     
-      // This function handles events where one button is clicked
+       // This function handles events where one button is clicked
       renderButtons();
 
       $("#add-topic").on("click", function() {
@@ -44,10 +42,15 @@
                   $("#sport-gif").empty();
                   console.log(response.data.length);
                   for (var i = 0; i < response.data.length; i++) {
-                      var sportBtn = $("<img>").attr("src", response.data[i].images.fixed_height_still.url).attr("class", "layout").
+                  
+                      var sportBtn = $("<img>")
+                      sportBtn.attr("src", response.data[i].images.fixed_height_still.url).attr("class", "layout").
                       attr("data-still", response.data[i].images.fixed_height_still.url).attr("data-animate", response.data[i].images.fixed_height.url).
                       attr("data-image", "still");
-                      $("#sport-gif").append(sportBtn);
+                      var newDiv = $("<div class = 'card'>").append(sportBtn);
+                      var rating = $("<p class = 'text-center card-text'>").html("Rating: " + response.data[i].rating.toUpperCase());
+                      newDiv.append(rating);
+                      $("#sport-gif").append(newDiv);
                    };    
               } );
           });

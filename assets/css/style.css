@@ -1,11 +1,67 @@
  button,
-    div,
+    /*div,*/
     form,
     input {
       margin: 10px;
     }
 
+h1 {
+	color:#214460;
+	font-size: 20%;
+}
+
 .layout {
 	padding:5px;
-	border: solid, 2px;
+  border-width: 15px;
+  border-color: white;
+}
+
+
+
+.btn{
+    white-space:normal !important;
+    word-wrap:break-word; 
+    word-break: normal;
+}
+
+#user-form {
+	margin-top:4%;
+}
+
+.jumbotron {
+  padding-top: 2rem;
+  padding-bottom: 6rem;
+  margin-bottom: 0;
+  margin-top: 3%;
+  background-color: #214460;
+  color: white;
+}
+
+
+.album {
+  padding-top: 5rem;
+  padding-bottom: 3rem;
+  background-image: url("../images/images3.jpg");;
+  height:100%;
+  width: 100%;
+ background-size: cover;
+}
+
+	.card {
+	  float: left;
+	  width: auto;
+	  padding: .75rem;
+	  margin-bottom: 2rem;
+	  
+	 
+	}
+
+.card > img {
+  margin-bottom: .75rem;
+  	  border-width: 5px;
+	  border-color: white;
+}
+
+.card-text {
+  font-size: 100%;
 }
